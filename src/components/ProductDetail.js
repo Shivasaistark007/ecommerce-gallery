@@ -16,7 +16,7 @@ const Products = [
         price: 20, 
         category: "Books", 
         image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1588286863i/634583.jpg" 
-        description: "Wings  of  Fire"  is  a  compelling  and  inspirational  autobiography  of A.P.J.  Abdul  Kalam, authored by Arun Tiwari. The book  is divided  into three  parts, each  chronicling  significant phases of Kalam's life, his achievements, and his contributions to  science  and  technology  in India."
+        description: "Wings ofFire is a compelling and inspirational autobiography of A.P.J.Abdul Kalam, authored by Arun Tiwari. The book is divided into three  parts, each chronicling significant phases of Kalam's life, his achievements, and his contributions to science and technology in India."
       },
       { 
         id: 3, 
@@ -45,17 +45,16 @@ const ProductDetail = () => {
   }
 
   return (
-    <div style={{ background: "#f9f9f9", padding: "20px", minHeight: "100vh" }}>
+    <div style={{ padding: '20px' }}>
       <h1>{product.name}</h1>
       <img 
         src={product.image} 
         alt={product.name} 
-        style={{ width: "300px", height: "300px", objectFit: "cover", borderRadius: "8px" }}
+        style={{ width: '300px', height: 'auto', borderRadius: '8px' }} 
       />
       <p>Price: ${product.price}</p>
       <p>Category: {product.category}</p>
-      <p>Description: {product.description}</p>
-      <Link to="/">Back to Gallery</Link>
+      <p>{product.description}</p>
     </div>
   );
 };
